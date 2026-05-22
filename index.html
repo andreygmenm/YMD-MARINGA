@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baterias em Maringá - Baterias Yamada 24H</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="description" content="Baterias 24H em Maringá e Região. Entrega + instalação grátis. Chegamos em até 27 minutos. Diagnóstico gratuito via scanner. 10x sem juros. Baterias Yamada." />
+  <link rel="canonical" href="https://bateriasemmaringa.com.br/" />
+  <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/bateriasx.webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #cc0000;
+      --red-dark: #a00000;
+      --green: #1db954;
+      --green-dark: #17a347;
+      --black: #111111;
+      --dark: #1a1a1a;
+      --card-bg: #181818;
+      --white: #ffffff;
+      --gray: #cccccc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── NAVBAR ─── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0d0d0d;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar-logo img {
+      height: 44px;
+      width: auto;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .navbar-menu a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      transition: color .2s;
+    }
+
+    .navbar-menu a:hover { color: var(--red); }
+
+    .btn-call {
+      background: var(--green);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .5px;
+      padding: 10px 22px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .btn-call:hover { background: var(--green-dark); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      background: #8b0000;
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      gap: 40px;
+    }
+
+    .hero-text { max-width: 560px; }
+
+    .hero-text h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 28px;
+      color: var(--white);
+    }
+
+    .hero-text h1 span { color: var(--red); }
+
+    .hero-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .hero-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .hero-features li .icon {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--white);
+    }
+
+    .hero-features li .highlight { color: var(--red); font-weight: 700; }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-whatsapp:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    .btn-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-phone:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+    .hero-img {
+      flex-shrink: 0;
+      max-width: 480px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 40px rgba(200,0,0,.3));
+    }
+
+    /* ─── FEATURES BAR ─── */
+    .features-bar {
+      background: var(--black);
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .features-tagline {
+      text-align: center;
+      padding: 32px 20px 0;
+      font-size: 16px;
+      color: var(--gray);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 20px 40px;
+      gap: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .feature-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--red);
+      border: 3px solid var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+      color: var(--white);
+    }
+
+    .feature-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .feature-item p { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+    /* ─── 24H CARD ─── */
+    .section-24h {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-24h {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background: var(--card-bg);
+      border: 2px solid var(--red);
+      border-radius: 12px;
+      padding: 40px 48px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .card-24h img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .card-24h-text h2 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .card-24h-text h2 span { color: var(--red); }
+
+    .card-24h-text p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--gray);
+    }
+
+    .card-24h-text p strong { color: var(--white); }
+
+    /* ─── CTA BTN CENTER ─── */
+    .cta-center {
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .btn-whatsapp-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 40px;
+      border-radius: 6px;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-whatsapp-lg:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+    /* ─── BANNER TITLE ─── */
+    .section-banner {
+      background: var(--card-bg);
+      border: 2px solid var(--red);
+      border-radius: 8px;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 22px 40px;
+      text-align: center;
+    }
+
+    .section-banner h2 { font-size: clamp(20px, 3vw, 30px); font-weight: 900; }
+    .section-banner h2 span { color: var(--red); }
+
+    /* ─── QUEM SOMOS ─── */
+    .quem-somos {
+      padding: 20px 20px 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-quem-somos {
+      background: var(--card-bg);
+      border: 2px solid var(--red);
+      border-radius: 12px;
+      padding: 48px 56px;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card-quem-somos p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+
+    .card-quem-somos p:last-child { margin-bottom: 0; }
+    .card-quem-somos p strong { color: var(--white); }
+
+    .highlight-line {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white) !important;
+      margin-top: 24px !important;
+    }
+
+    /* ─── PRODUCTS ─── */
+    .products-section { padding: 40px 20px; }
+    .products-subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 32px;
+      padding: 0 20px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 2px solid var(--red);
+      border-radius: 12px;
+      padding: 32px 28px 40px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .product-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+    .product-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+    .product-card p strong { color: var(--white); }
+
+    /* ─── BRAND LOGOS ─── */
+    .brands-section {
+      background: var(--white);
+      padding: 32px 20px;
+      overflow: hidden;
+    }
+
+    .brands-track {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .brands-track img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      filter: none;
+    }
+
+    /* ─── PROCESS ─── */
+    .process-section {
+      background: var(--dark);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .process-title {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      margin-bottom: 48px;
+    }
+
+    .process-title span { color: var(--red); }
+
+    .process-steps {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .step-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      min-width: 160px;
+    }
+
+    .step-number {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .step-arrow {
+      font-size: 20px;
+      color: var(--red);
+      padding: 0 8px;
+      margin-top: -30px;
+    }
+
+    .step-card {
+      background: var(--red);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 180px;
+    }
+
+    .step-card-icon {
+      background: var(--white);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .step-card span {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: left;
+      line-height: 1.3;
+    }
+
+    /* ─── GALLERY ─── */
+    .gallery-section {
+      background: var(--white);
+      padding: 0 0 40px;
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .gallery-grid img {
+      flex: 1;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #0d0d0d;
+      padding: 52px 40px 24px;
+      border-top: 2px solid #222;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto 32px;
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+    .footer-col ul li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .footer-col ul li .dot { color: var(--red); font-size: 16px; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    .contact-item .icon { color: var(--red); font-size: 16px; }
+    .contact-item .icon-green { color: var(--green); font-size: 18px; }
+
+    .payment-logos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .payment-logo {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      height: 44px;
+    }
+
+    .payment-logo.visa { color: #1a1f71; font-size: 18px; letter-spacing: -1px; }
+    .payment-logo.master { background: #eb001b; color: #fff; font-size: 11px; font-weight: 700; }
+    .payment-logo.pix { color: #32bcad; font-size: 15px; }
+    .payment-logo.elo { color: #000; font-size: 18px; }
+
+    .trust-badges {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--gray);
+    }
+
+    .trust-badge .icon { color: var(--gray); font-size: 18px; }
+
+    .footer-bottom {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .footer-bottom p { font-size: 12px; color: #666; margin-bottom: 6px; }
+
+    /* ─── REVIEWS ─── */
+    .reviews-section {
+      padding: 8px 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-stars { color: #f5a623; font-size: 18px; letter-spacing: 2px; }
+
+    .review-text {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .review-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .review-author strong { display: block; font-size: 13px; color: #111; }
+    .review-author span { font-size: 11px; color: #888; }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    .whatsapp-float img { width: 32px; height: 32px; }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      /* Navbar */
+      .navbar { padding: 0 16px; }
+      .navbar-menu { display: none; }
+      .hamburger { display: flex; }
+      .navbar-menu.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: #0d0d0d;
+        padding: 20px 24px;
+        border-bottom: 1px solid #222;
+        z-index: 999;
+        gap: 16px;
+      }
+
+      /* Hero */
+      .hero { min-height: auto; }
+      .hero-bg {
+        opacity: 0.0;          /* ocultar fundo no mobile — hero usa cor sólida #0d0d0d */
+      }
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px 32px;
+        text-align: left;
+        gap: 0;
+      }
+      .hero-img {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 16px;
+      }
+      .hero-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: contain;
+      }
+      .hero-text { width: 100%; }
+      .hero-text h1 { font-size: 22px; margin-bottom: 20px; }
+      .hero-features li { font-size: 14px; gap: 10px; }
+      .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .btn-whatsapp, .btn-phone {
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+        padding: 14px 20px;
+      }
+
+      /* Features bar */
+      .features-grid { grid-template-columns: 1fr; gap: 24px; }
+
+      /* 24H */
+      .card-24h { flex-direction: column; padding: 28px 20px; text-align: center; }
+      .card-24h img { max-width: 240px; margin: 0 auto; }
+
+      /* Products */
+      .products-grid { grid-template-columns: 1fr; }
+
+      /* Process */
+      .process-steps { gap: 20px; flex-direction: column; align-items: center; }
+      .step-arrow { display: none; }
+      .step-wrapper { flex-direction: column; align-items: center; gap: 8px; }
+      .step-card { min-width: 240px; }
+
+      /* Gallery */
+      .gallery-grid { flex-direction: column; }
+      .gallery-grid img { height: 200px; flex: none; width: 100%; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; }
+
+      /* Misc */
+      .section-banner { margin: 0 16px; padding: 18px 20px; }
+      .card-quem-somos { padding: 28px 20px; }
+      .reviews-section { padding: 8px 16px 32px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .btn-whatsapp-lg { width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .features-grid { gap: 20px; }
+      .feature-icon { width: 50px; height: 50px; font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#inicio" class="navbar-logo">
+      <img width="220" height="44" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Carro-moto-entrega_de_baterias-disck_baterias__600_x_300_px___240_x_80_px_-removebg-preview-1.png" alt="Baterias Yamada" />
+    </a>
+    <ul class="navbar-menu" id="nav-menu">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#quem-somos">Quem Somos</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="tel:+5544991820020" class="btn-call">LIGAR NA LOJA</a>
+    <div class="hamburger" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- TOP BAR -->
+  <div class="topbar">ESTAMOS ABERTOS · ATENDIMENTO 24 HORAS</div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Baterias 24H Em Maringá E Região &ndash; <span>Baterias Yamada</span></h1>
+        <ul class="hero-features">
+          <li>
+            <span class="icon"><i class="fa-solid fa-truck-fast"></i></span>
+            <span>Entrega + instalação <span class="highlight">GRÁTIS</span></span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-truck-fast"></i></span>
+            <span>Chegamos em até <span class="highlight">27 MINUTOS</span></span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-battery-full"></i></span>
+            <span>Diagnóstico via scanner <span class="highlight">GRATUITO</span> antes da instalação</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-credit-card"></i></span>
+            <span>Pagamento em até <span class="highlight">10X SEM JUROS</span></span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-trophy"></i></span>
+            <span>Reconhecida pela <span class="highlight">QUALIDADE</span> no atendimento</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-star"></i></span>
+            <span>Mais de 14 anos de <span class="highlight">EXPERIÊNCIA</span> no mercado</span>
+          </li>
+        </ul>
+        <div class="hero-btns">
+          <a href="https://wa.me/5544991820020" target="_blank" rel="noopener" class="btn-whatsapp">
+            <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="20" height="20" />
+            Peça agora pelo WhatsApp
+          </a>
+          <a href="tel:+5544991820020" class="btn-phone">
+            📞 (44) 99182-0020
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/bateriasx.webp" fetchpriority="high" width="480" height="360" alt="Entrega de baterias em Maringá" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES BAR -->
+  <section class="features-bar">
+    <p class="features-tagline">Bateria nova, preço justo, entrega rápida e durabilidade de verdade. Qualidade é o nosso compromisso.</p>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div>
+          <h3>Entrega Super Rápida</h3>
+          <p>Chegamos até você em tempo recorde, com agilidade e compromisso.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-brands fa-cc-visa"></i></div>
+        <div>
+          <h3>Levamos a Maquininha</h3>
+          <p>Pague no local — crédito ou débito em até 10x, fácil e seguro.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-battery-full"></i></div>
+        <div>
+          <h3>Instalação Grátis</h3>
+          <p>Técnicos especializados instalam sem custo e com total confiança.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+        <div>
+          <h3>Satisfação Garantida</h3>
+          <p>Atendimento direto, sem enrolação. Sua satisfação é prioridade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24H SECTION -->
+  <section class="section-24h">
+    <div class="card-24h">
+      <div class="card-24h-icon" style="font-size:5rem;flex-shrink:0;">🕐</div>
+      <div class="card-24h-text">
+        <h2>Plantão <span>24 HORAS</span>:</h2>
+        <p>
+          Nossa equipe de especialistas está pronta para atender você
+          <strong>independente do dia ou hora.</strong><br /><br />
+          Trabalhamos com <strong>plantão 24 horas de segunda à segunda</strong> para solucionar
+          seu problema. Chama a Baterias Yamada!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-center">
+    <a href="https://wa.me/5544991820020" target="_blank" rel="noopener" class="btn-whatsapp-lg">
+      <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="22" height="22" />
+      Peça agora pelo Whatsapp
+    </a>
+  </div>
+
+  <!-- BANNER RECOMENDADA -->
+  <div style="padding: 0 20px;">
+    <div class="section-banner">
+      <h2>A Loja mais <span>Recomendada</span> da Região.</h2>
+    </div>
+  </div>
+  <p style="text-align:center; color: var(--gray); font-size:15px; padding: 12px 20px 24px;">
+    O melhor atendimento comprovado pelos nossos clientes. Escolha a melhor loja de baterias.
+  </p>
+
+  <!-- DEPOIMENTOS -->
+  <section class="reviews-section">
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Serviço impecável pelo whatsapp, preço justo, e realmente 24hrs qualquer dia da semana. Me salvaram num domingo de feriado. Recomendo"</p>
+        <div class="review-author">
+          <div class="review-avatar">PK</div>
+          <div>
+            <strong>Peter Krause</strong>
+            <span>02/11/2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Eficiência, Competência, Rapidez, Agilidade. Parabéns"</p>
+        <div class="review-author">
+          <div class="review-avatar">NS</div>
+          <div>
+            <strong>Nilo Sérgio Silvy</strong>
+            <span>02/11/2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Fiquei muito surpreso com a agilidade... Liguei e em pouco tempo já estavam no local, resolveram tudo sem complicação!! A experiência mostrou que realmente há atendimento em menos de 20 minutos, e isso é raro."</p>
+        <div class="review-author">
+          <div class="review-avatar">HT</div>
+          <div>
+            <strong>Henrique Torres</strong>
+            <span>01/11/2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Serviço ágil, eficiente e realmente atendem 24 horas!!! Baterias Yamada me atendeu eram 2h da manhã com muito profissionalismo... Melhor empresa de bateria de carro e moto em Maringá."</p>
+        <div class="review-author">
+          <div class="review-avatar">JL</div>
+          <div>
+            <strong>Juliane Lopes</strong>
+            <span>29/10/2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Super recomendo! Fiquei na estrada perto de Sarandi e me atenderam no final de semana. Chegaram rápido e o técnico foi muito atencioso. Atendimento confiável!"</p>
+        <div class="review-author">
+          <div class="review-avatar">EA</div>
+          <div>
+            <strong>Eduardo Almeida</strong>
+            <span>25/10/2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section class="quem-somos" id="quem-somos">
+    <div class="card-quem-somos">
+      <p>
+        Em Maringá e região, a <strong>Baterias Yamada</strong> é sinônimo de qualidade, agilidade e confiança
+        — 24 horas por dia. Somos reconhecidos pelo <strong>atendimento rápido e transparente</strong>,
+        com <strong>entrega e instalação totalmente gratuitas</strong>, além de <strong>socorro imediato</strong> em qualquer horário.
+      </p>
+      <p>
+        Com <strong>mais de 14 anos de experiência</strong>, trabalhamos com uma
+        <strong>linha completa de baterias</strong> para carros, motos, caminhões e máquinas pesadas,
+        sempre com <strong>garantia de fábrica, preços justos</strong> e
+        <strong>pagamento facilitado em até 10x sem juros</strong>.
+      </p>
+      <p>
+        Nosso compromisso é simples: <strong>diagnóstico gratuito via scanner</strong>,
+        troca apenas quando necessário e <strong>chegada em até 30 minutos</strong>.
+      </p>
+      <p class="highlight-line">
+        Baterias Yamada — a número 1 em atendimento 24h.<br />
+        Porque aqui, <strong>você nunca fica na mão.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-center">
+    <a href="https://wa.me/5544991820020" target="_blank" rel="noopener" class="btn-whatsapp-lg">
+      <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="22" height="22" />
+      Peça agora pelo Whatsapp
+    </a>
+  </div>
+
+  <!-- BANNER TECNOLOGIAS -->
+  <div style="padding: 0 20px 8px;">
+    <div class="section-banner">
+      <h2>As melhores marcas com as <span>Maiores Tecnologias</span></h2>
+    </div>
+  </div>
+  <p style="text-align:center; color: var(--gray); font-size:14px; padding: 8px 20px 16px;">
+    Bateria original de montadora – Bateria convencional – Bateria para carros Start-Stop (AGM e EFB) – Bateria estacionária – Bateria náutica
+  </p>
+
+  <!-- PRODUCTS -->
+  <section class="products-section" id="produtos">
+    <div class="products-grid">
+      <div class="product-card">
+        <div style="font-size:3.5rem;margin-bottom:16px;">🔋</div>
+        <h3>Baterias Originais</h3>
+        <p>
+          Trabalhamos apenas com <strong>marcas reconhecidas por sua qualidade e confiabilidade</strong>,
+          as mesmas utilizadas pelas principais montadoras. Cada modelo é desenvolvido sob medida para o seu veículo,
+          garantindo <strong>melhor encaixe, durabilidade prolongada e desempenho máximo</strong> em qualquer situação.
+        </p>
+      </div>
+      <div class="product-card">
+        <div style="font-size:3.5rem;margin-bottom:16px;">⚡</div>
+        <h3>Baterias AGM</h3>
+        <p>
+          As <strong>baterias AGM (Absorbent Glass Mat)</strong> foram criadas para atender veículos com maior
+          exigência elétrica. Elas utilizam <strong>mantas de fibra de vidro</strong> que retêm o eletrólito,
+          permitindo <strong>maior eficiência energética, melhor recuperação após descargas profundas</strong>
+          e excelente resistência a vibrações. Perfeitas para quem busca <strong>potência e estabilidade</strong>,
+          mesmo em condições severas de uso.
+        </p>
+      </div>
+      <div class="product-card">
+        <div style="font-size:3.5rem;margin-bottom:16px;">🚗</div>
+        <h3>Baterias EFB</h3>
+        <p>
+          As <strong>baterias EFB (Enhanced Flooded Battery)</strong> são ideais para
+          <strong>veículos equipados com tecnologia Start-Stop</strong>. Oferecem
+          <strong>recarga rápida, alta resistência a ciclos de carga e descarga</strong> e mantêm
+          ótimo desempenho em veículos de uso intenso, como táxis e frotas. São uma
+          <strong>opção mais econômica</strong> em relação às AGM, sem abrir mão de
+          <strong>confiabilidade e eficiência</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <div class="brands-section">
+    <div class="brands-track">
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Logo-1.webp" alt="Moura" />
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Logo-8.webp" alt="Zetta" />
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Logo-2.webp" alt="Heliar" />
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/download-3-removebg-preview.png" alt="ACDelco" />
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Logo-1.webp" alt="Moura" />
+      <img loading="lazy" src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/Logo-8.webp" alt="Zetta" />
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <h2 class="process-title">Como funciona nossa <span>Entrega e Instalação:</span></h2>
+    <div class="process-steps">
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-card">
+            <div class="step-card-icon">📞</div>
+            <span>FALE COM BATERIAS<br />YAMADA</span>
+          </div>
+        </div>
+        <div class="step-arrow">➡➡➡➡</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-card">
+            <div class="step-card-icon">🎧</div>
+            <span>ATENDIMENTO<br />PERSONALIZADO</span>
+          </div>
+        </div>
+        <div class="step-arrow">➡➡➡➡</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-card">
+            <div class="step-card-icon">🔋</div>
+            <span>ESCOLHA SUA<br />BATERIA</span>
+          </div>
+        </div>
+        <div class="step-arrow">➡➡➡➡</div>
+      </div>
+      <div class="step-wrapper">
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-card">
+            <div class="step-card-icon">🚚</div>
+            <span>ENTREGA E<br />INSTALAÇÃO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA abaixo dos steps -->
+    <div style="margin-top: 40px;">
+      <a href="https://wa.me/5544991820020" target="_blank" rel="noopener" class="btn-whatsapp-lg">
+        <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="22" height="22" />
+        Peça agora pelo Whatsapp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Locais de Atendimento:</h4>
+        <ul>
+          <li><span class="dot">📍</span> Maringá</li>
+          <li><span class="dot">📍</span> Sarandi</li>
+          <li><span class="dot">📍</span> Paiçandu</li>
+          <li><span class="dot">📍</span> Marialva</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contatos:</h4>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <a href="tel:+5544991820020">(44) 99182-0020</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon-green">
+            <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="18" height="18" />
+          </span>
+          <a href="https://wa.me/5544991820020" target="_blank" rel="noopener">(44) 99182-0020</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">🕐</span>
+          Plantão 24 Horas
+        </div>
+        <div style="margin-top: 16px;">
+          <a href="https://wa.me/5544991820020?text=Loja%20de%20Baterias%20%7C%20Baterias%20Yamada%20%7C%20Baterias%20em%20Maring%C3%A1" target="_blank" rel="noopener" style="font-size:12px; color: var(--gray);">
+            📍 Loja de Baterias | Baterias Yamada | Baterias em Maringá
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pagamentos:</h4>
+        <div class="payment-logos">
+          <div class="payment-logo visa">VISA</div>
+          <div class="payment-logo master">Mastercard</div>
+          <div class="payment-logo pix">PIX</div>
+          <div class="payment-logo elo">Elo</div>
+        </div>
+        <div class="trust-badges">
+          <div class="trust-badge"><span class="icon">🛡️</span> Compra Segura</div>
+          <div class="trust-badge"><span class="icon">🏅</span> Satisfação Garantida</div>
+          <div class="trust-badge"><span class="icon">🔒</span> Privacidade Protegida</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Baterias Yamada 24H - Copyright © 2012 - Todos os Direitos Reservados.</p>
+      <p style="display:flex;align-items:center;justify-content:center;gap:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" width="14" height="14" />
+        Desenvolvido por: Agência Go!Mkt
+      </p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5544991820020" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <img src="https://cdn.jsdelivr.net/gh/andreygmenm/YMD-FLORIPA@main/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
